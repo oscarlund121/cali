@@ -26,6 +26,7 @@ import {
   Trash2,
   type LucideIcon,
 } from "lucide-react";
+import { CaliLogo } from "@/components/cali-logo";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import {
@@ -336,8 +337,9 @@ export function TaskCalendar({ tasks }: { tasks: Task[] }) {
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-3xl flex-col gap-6 p-6">
-      <header>
-        <h1 className="text-2xl font-semibold tracking-tight">cali</h1>
+      <header className="flex flex-col gap-1">
+        <h1 className="sr-only">cali</h1>
+        <CaliLogo className="h-8 w-auto" aria-hidden="true" />
         <p className="text-sm text-muted-foreground">Your tasks, on a calendar.</p>
       </header>
 
